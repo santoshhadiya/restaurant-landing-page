@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pato web</title>
+    <style>
+       
+        *{
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+         opacity: 1;
+         transition: 0.5s;
+        }
+        .theme{
+         width: 100%;
+         height: 400px;
+         background-image: url(theme.webp);
+         background-repeat: no-repeat;
+         background-size: cover;
+         color: white;
+        }
+        .cover{
+         width: 100%;
+         height: 100%;
+         padding: 10px;
+         background-color: rgba(0, 0, 0, 0.317);
+        }
+        .menu{
+         display: flex;
+         color: white;
+         align-items: center;
+         justify-content: space-between;
+        }
+        .menu img{
+         width: 80px;
+         height: 40px;
+        }
+        .menu ul li{
+         list-style: none;
+         display: inline;
+         margin-right: 30px;
+         font-size: 17px;
+        }
+        .menu ul li:hover{
+         color: red;
+         cursor: pointer;
+         text-decoration: overline;
+        }
+        .contant{
+         display: grid;
+         place-items: center;
+         margin-top: 40px;
+        }
+        .contant h2{
+         font-size: 70px;
+         letter-spacing: 10px;
+         padding: 10px;
+         padding-bottom: 100px;
+        }
+       .contant h1{
+         color: red;
+       }
+        .btn{
+         background-color: white;
+         border: 1px solid rgba(0, 0, 0, 0);
+         border-radius: 10px;
+         color: red;
+         padding: 10px;
+         width: 130px;
+         letter-spacing: 1px;
+        }
+        .btn:hover{
+         background-color: red;
+         color: white;
+         cursor: pointer;
+        }
+        .italian{
+         background-color: white;
+         padding: 10px;
+         text-align: center;
+         margin-top: 40px;
+         display: grid;
+         place-items: center;
+        }
+        .me h2,.italian h2, .discover h2, .book h2{
+         color: rgb(188, 3, 3);
+         font-size: 27px;
+         
+        }
+        .me h1,.italian h1, .discover h1, .book h1{
+         letter-spacing: 10px;
+         font-size: 40px;
+         margin-bottom: 20px;
+        }
+        
+        .italian p,a{
+         font-size: 16px;
+         text-decoration: none;
+         width: 70%;
+         margin: 5px 0px;
+         color: rgb(166, 165, 165);
+        }
+        .i_image{
+         background-image: url(italian.webp);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         height: 390px;
+         width: 350px;
+         margin: 30px 5px;
+         border-radius: 10px;
+        }
+        .i_image:hover{
+           background-size: 120%;
+        }
+        .end_back{
+         display: block;
+         padding: 20px;
+         width: 80%;
+         height: 400px;
+         margin: auto; 
+        text-align: center;
+         background-image: url(end_back.webp);
+         background-attachment: fixed;
+         background-size: cover;
+         background-position: center;
+        }
+        .end_back h2{
+         color: red;
+         font-size: 25px;
+        }
+        .end_back h1{
+           font-size: 50px;
+           margin-top: 30px;
+           letter-spacing: 10px;
+        }
+        .box{
+         margin-top: 60px;
+         width: 220px;
+         height: 400px;
+         padding: 10px;
+        }
+        .box_img{
+         border-radius: 10px;
+         height: 110px;
+         width: 190px;
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+        }
+        .box_img:hover{
+           background-size: 110%;
+        }
+        .box_cnt{
+         margin-top: 15px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+        }
+        .box_cnt p,.box_cnt a, .creat p{
+           font-size: 14px;
+           color: rgb(119, 119, 119);
+        }
+        .romentic{
+         background-color: rgb(226, 226, 226);
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+        }
+        .discover{
+         background-color: rgb(212, 195, 173);
+         text-align: center;
+         padding-top: 20px;
+         width: 100%;
+         min-height: 450px;
+         
+        }
+        .lunch, .lunchh{
+         width: 200px;
+         height: 250px;
+         padding-top: 100px;
+         border-radius: 10px;
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+        }
+        .lunch:hover{
+         background-size: 105%;
+        }
+        .lunchh:hover{
+         background-size: 140%;
+        }
+        .btn3{
+         background-color: white;
+         border: 1px solid rgba(0, 0, 0, 0);
+         border-radius: 10px;
+         color: red;
+         padding: 20px;
+         width: 160px;
+         letter-spacing: 1px;
+         font-size: 20px;
+        }
+        .btn3:hover{
+         background-color: rgba(255, 0, 0, 0.675);
+         color: white;
+         cursor: pointer;
+        }
+        .dis_box{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         padding: 10px;
+         gap: 10px;
+      }
+      .book{
+         margin: 10px;
+         margin-left: 18%;
+         border-radius: 10px;
+         min-width: 340px;
+         width: 70%;
+         min-height: 380px;
+         background-color:rgb(207, 207, 207);
+         padding: 40px;
+      }
+      input,select{
+         height: 35px;
+         width: 580px;
+         border: 0px solid rgb(138, 138, 138);
+         border-radius: 10px;
+         color: rgb(159, 159, 159);
+         outline: none;
+         padding: 10px;
+         background-color: rgb(202, 201, 201);
+      }
+      input:hover,select:hover{
+         background-color: rgb(255, 255, 255);
+ 
+      }
+      td{
+        padding: 10px;
+        color: rgb(81, 81, 81);
+ 
+      }
+      .creat{
+         width: 100%;
+         height: 300px;
+         background-color: rgb(255, 255, 255);
+         text-align: center;
+         padding: 20px;
+         margin-bottom: 20px;
+      }
+      .photo{
+         height: 100px;
+         width: 100px;
+         border-radius: 50%;
+         border: 2px solid red;
+         margin-left: 45%;
+         background-image: url(santosh.jpg);
+         background-position: center;
+         background-size: cover;
+         margin-bottom: 60px;
+      }
+      .signup{
+         background-color: rgb(255, 255, 255);
+         padding: 20px;
+         width: 100%;
+         text-align: center;
+      }
+      .footer{
+         background-color: black;
+         color: white;
+         text-align: center;
+         height: 80px;
+         padding: 30px;
+      }
+      .timing{
+         padding: 10px;
+         text-align: center;
+         border-radius: 20px;
+         background-color: rgb(200, 200, 200);
+      }
+      @media(max-width:700px)
+      {
+         input,select{
+         height: 35px;
+         width: 280px;
+        }
+      }
+      @media(max-width:660px)
+      {
+         .contant h2{
+         font-size: 50px;
+         
+        }
+       .contant h1{
+        font-size: 20px;
+       }
+       .menu ul li{
+         margin-right: 15px;
+         font-size: 14px;
+        }
+        input,select{
+         height: 35px;
+         width: 280px;
+        }
+        .lunch, .lunchh{
+         width: 150px;
+         height: 200px;
+         }
+         .btn3{
+         padding: 20px;
+         width: 100px;
+         letter-spacing: 1px;
+         font-size: 15px;
+        }
+        .wel{
+           font-size: 500px;
+        }
+      }
+      @media(max-width:500px)
+      {
+         .contant h2{
+         font-size: 30px;
+         
+        }
+       .contant h1{
+        font-size: 10px;
+       }
+       .menu ul li{
+         margin-right: 15px;
+         font-size: 10px;
+        }
+        input,select{
+         height: 35px;
+         width: 180px;
+        }
+        .lunch, .lunchh{
+         width: 100px;
+         height: 200px;
+         }
+         .btn3{
+         padding: 20px;
+         width: 100px;
+         letter-spacing: 1px;
+         font-size: 15px;
+        }
+      }
+      @media(max-width:980px){
+       
+      }
+     </style>
+</head>
+<body onload="time()">
+    <div class="web">
+        <div class="theme">
+           <div class="cover"> 
+            <div class="menu">
+            <img src="pato_logo.webp" class="logo_img">
+            <ul>
+                <li>Home</li>
+                <li>Manuu</li>
+                <li>About</li>
+                <li>Gallary</li>
+                <li>Bolg</li>
+                <li>Contant</li>
+            </ul>
+            </div>
+            <div class="contant">
+                <h1 class="wel">Welcome to</h1>
+                <h2>PATO PLACE</h2>
+                <button class="btn">Look Manu</button>
+            </div>
+        </div>
+      </div>
+      <div class="italian">
+        <h2>Italian Restaurant</h2>
+        <h1>WELCOME</h1>
+        <p>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.</p>
+        <a href="#">OUR STORY</a>
+        <div class="i_image"></div>
+      </div>
+      <div class="end_back">
+        <h2>Discover</h2>
+        <h1>PATO PLACE</h1>
+      </div>
+      <div class="romentic">
+        <div class="box">
+            <div class="box_img" style=" background-image: url(romantic_resturent.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img"style="background-image: url(romentik1.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img" style=" background-image: url(romentok2.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+      </div>
+      <div class="discover">
+        <div class="head_dis">
+            <h2>Discover</h2>
+            <h1>OUR MENU</h1>
+        </div>
+        <div class="dis_box">
+            <div class="2box">
+                <div class="lunch" style="background-image: url(dinner.webp);">
+                <button class="btn3">LUNCH</button>
+                </div>
+            </div>
+            <div class="2box">
+                <div class="lunch" style="background-image: url(LUNCH2.webp);">
+                <button class="btn3">DINNER</button>
+                </div>
+            </div>
+            <div class="2box">
+                <div class="lunchh" style="background-image: url(LUNCH3.webp);">
+                <button class="btn3">DRINK</button>
+                </div>
+            </div>
+            
+        </div>
+        
+      </div>
+      <div class="book">
+        <h2>Italian Restaurant</h2>
+        <h1>WELCOME</h1>
+        <div class="timing">
+            <p id="ctime">Loading...</p>
+          </div>
+        <table>
+            <tr>
+                <td>Date</td>
+                </tr><tr>
+                <td><input type="date" id="date"></td>
+                </tr><tr>
+                <td>Name</td></tr><tr>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                </tr>
+                <tr>
+                <td><select id="time">
+                    <option>9:00</option>
+                    <option>10:00</option>
+                </select></td>
+                </tr>
+                <tr>
+                <td>Phone</td>
+                </tr>
+                <tr>
+                <td><input type="tel" id="phone"></td>
+                </tr>
+            
+            <tr>
+                <td> People</td>
+                </tr>
+                <tr>
+                <td><select id="people">
+                    <option>1</option>
+                    <option>2</option>
+                </select></td>
+                </tr>
+                <tr>
+                <td> Mail <p id="pp">Optional</p></td>
+                </tr>
+                <tr>
+                <td><input type="email" id="mail"></td>
+            </tr>
+        </table>
+       <button class="btn" onclick="book()" id="tablebtn">BOOK TABLE</button>
+   <table id="table">
+    
+   </table>
+    </div>
+    <div class="creat">
+        <div class="me">
+            <h2>Create by</h2>
+            <h1>SANTOSH</h1>
+        </div>
+        <div class="photo"></div>
+        <p>Santosh Hadiya From Gujarat Univerdity</p>
+    </div>
+    <div class="romentic">
+        <div class="box">
+            <div class="box_img" style=" background-image: url(romantic_resturent.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img"style="background-image: url(romentik1.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img" style=" background-image: url(romentok2.webp);"></div>
+            <div class="box_cnt">
+                <h2>ROMENTIC RESTAURANT</h2>
+                <p>Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.</p>
+                <a href="#">LEARN MORE</a>
+            </div>
+        </div>
+      </div>
+      <div class="signup">
+        <h3>SPACIALS SING UP</h3><br>
+        <input type="text" placeholder="Enter Email.."><br><br>
+        <button class="btn">SIGN-UP</button>
+      </div>
+      <div class="footer">
+        Sunday Project, Date:03-03-2024, @santosh_hadiya
+      </div>
+      
+    </div>
+    <script src="jquery-3.6.1.js"></script>
+    <script>
+        function book(){
+            var date=document.getElementById('date').value;
+            var name=document.getElementById('name').value;
+            var time=document.getElementById('time').value;
+            var phone=document.getElementById('phone').value;
+            var people=document.getElementById('people').value;
+            var mail=document.getElementById('mail').value;
+            var date2=new Date(date);
+            var currnt=new Date();
+            if(date2<currnt || date2.getDay()!=currnt.getDay()+1)
+            {
+                alert("BOOKING FOR TOMMOROW ONLY!");
+                return;
+            }
+            var time2=date2.getDate();
+            var month=date2.getMonth();
+            var year=date2.getFullYear();
+            if(date=="" || name== "" || phone=="")
+            {
+                alert("Pliz Fill-Up Form");
+            }
+            else{
+          document.getElementById('table').innerHTML="<h2>Your Table Hase Been Booked!</h2>"+"<tr><td>Name:</td><td> "+name+"</td></tr>"+"<tr><td>Date:</td><td> "+time2+"/"+month+"/"+year+" :tommorow"+"</td></tr>"+"</td></tr>"+"<tr><td>Phone:</td><td> "+phone+"</td></tr>"+"<tr><td>People:</td><td> "+people+"</td></tr>"+"<tr><td>Mail:</td><td> "+mail+"</td></tr>";
+            }
+        }
+        function time(){
+            setTimeout(gettime,1000);
+        }
+        function gettime(){
+            var x=new Date();
+            var hours=x.getHours();
+            var minut=x.getMinutes();
+            var seco=x.getSeconds();
+            var hor;
+            if(hours>12)
+            {
+              hor=hours-12;
+            }
+            if(hours>12){
+            document.getElementById('ctime').innerHTML="Time : "+hor+":"+minut+":"+seco+" pm";
+            }
+            else{
+                document.getElementById('ctime').innerHTML="Time : "+hours+":"+minut+":"+seco+" am";
+
+            }
+            time();
+        }
+        $(document).ready(function(){
+            $('#pp').hide();
+            $('#mail').hover(function(){
+                $('#pp').show();
+            })
+            $('#mail').mouseout(function(){
+                $('#pp').hide();
+            })
+            $('#tablebtn').click(function()
+            {
+                $('#table').slideDown();
+            })
+        })
+    </script>
+</body>
+</html>
